@@ -1,5 +1,3 @@
-add_subdirectory(gtest EXCLUDE_FROM_ALL)
-
 # TODO(scripr-lab): upstream these buildsystems to the respective
 # projects.
 

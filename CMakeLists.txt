@@ -111,12 +111,6 @@ find_library(GMP_LIBRARIES NAMES gmp libgmp)
 find_library(GMPXX_LIBRARIES NAMES gmpxx libgmpxx)
 
 include(FindPkgConfig)
-pkg_check_modules(
-  CRYPTO
-  REQUIRED
-
-  libcrypto
-)
 
 if("${WITH_PROCPS}")
   pkg_check_modules(
@@ -130,10 +124,6 @@ else()
     -DNO_PROCPS
   )
 endif()
-
-# Enable Boost for program_options
-FIND_PACKAGE( Boost 1.40 COMPONENTS program_options REQUIRED )
-INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 add_definitions(
   -DCURVE_${CURVE}
