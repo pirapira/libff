@@ -1,4 +1,4 @@
-include_directories(.)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${GMP_INCLUDE_DIR})
 
 set(FF_EXTRASRCS)
 set(FF_EXTRALIBS)
